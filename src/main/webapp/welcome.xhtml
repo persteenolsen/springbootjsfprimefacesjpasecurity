@@ -22,8 +22,21 @@
         <div class="header">
         <div class="menu-header">
 
-	      <!--The menu and items are included as a file -->			
-	      <ui:include src="menu.xhtml"/>
+	      <!--NOte: On Azure the menu is not displayed with Spring Security the first time-->			
+		  <!--<ui:include src="menu.xhtml"/>-->
+		  
+		  <h:form>
+        <p:menu toggleable="true">
+            
+            <p:submenu label="A PrimeFaces Menu">
+
+                <p:menuitem value="About this Application" url="welcome.xhtml" icon="pi pi-star"/>
+                <p:menuitem value="Show Persons" url="listpersonspublic.xhtml" icon="pi pi-star"/>
+                <p:menuitem value="Login: user/persteen1967" url="/login" icon="pi pi-star"/>
+                
+            </p:submenu>
+        </p:menu>
+    </h:form>
 		
       </div>
      </div>
