@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+	  xmlns:f="http://xmlns.jcp.org/jsf/core"
+	  xmlns:ui = "http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>Spring Boot JSF PrimeFaces JPA</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+	
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
+        <!--Not working eigther in the folder "recources" nor "webapp"-->
+	    <!--<h:outputStylesheet name="/css/style.css"  />-->
+	
+	</h:head>
+	
+    <h:body class="body">
+			
+        <div class="header">
+        <div class="menu-header">
+
+	      <!--The menu and items are included as a file -->			
+	      <ui:include src="menu.xhtml"/>
+		
+      </div>
+     </div>
+
+     <div class="header-text">A Java Spring Boot Security JSF PrimeFaces JPA MySQL Web Application</div>
+        
+     <div class="jvminfo-text"> #{personController.getJVMHeap()} </div>
+        
+       
+	 <div class="body-content">
+
+        
+	<b>Note:</b> The Web applications 1-2 minutes initial load time is because I am using
+	a <br><i>Free App Service Plan at Microsoft Azure</i></br> 
+	because the work is for demonstration and testing purposes only!
+	
+	<br/>
+	<br/>
+	This Java Spring Boot Security JSF PrimeFaces MVC Web application was made by the following technology:
+	<br/><br/>
+
+	<ul>
+
+	<li>Visual Studio Code with the Microsoft Java Extension Pack</li>	
+	<li>Microsoft Azure App Service with a Free App Service Plan for web hosting</li>
+	<li>JVM memory have been set to an alocation of 512 MB both initial and max because of the limited physial memory</li>
+	<li>MySQL Database</li>
+	<li>Tomcat JDBC Datasource instead of the default HikariCP </li> 
+	</ul>
+
+	<ul>
+		<li>Spring Security for securing the administration part behind a login</li>
+		<li>Spring Boot Security Bcrypt Encoder for encoding password based on the Blowfish cipher. The password are not stored in pain text!
+		</li>
+	</ul>
+
+	<ul>
+		<li>JSF, PrimeFaces, Entity Model as well as a Service and JPA Repository layer</li>	
+		<li>Maven as build tool</li>	
+		<li>JPA implemented by Hibernate for initializing the Database and mapping Model instances / objects to the Database</li>
+		<li>Hibernate Validator and Apache Commons Validater for server side form validation</li>
+		
+	</ul>
+
+	<ul>
+		<li>PrimeFaces for the View part ( GUI )</li>
+		
+	</ul>
+	
+
+        
+    </div>
+    </h:body>
+</html>
+
