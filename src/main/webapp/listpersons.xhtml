@@ -22,20 +22,9 @@
      <div class="header">
        <div class="menu-header">
         
-       <!--Note: On Azure the menu is not displayed the first time when included and using Spring Security-->			
-       <!--<ui:include src="menuprotected.xhtml"/>-->
+       <!--Menu included-->			
+       <ui:include src="menuprotected.xhtml"/>
      
-    <h:form>
-        <p:menu toggleable="true">
-            
-            <p:submenu label="A PrimeFaces Menu">
-
-                <p:menuitem value="Admin Persons" url="listpersons.xhtml" icon="pi pi-star"/>
-                <p:menuitem value="Logout" url="/logout" icon="pi pi-star"/>
-                
-            </p:submenu>
-        </p:menu>
-    </h:form>
 
      </div>
     </div>
