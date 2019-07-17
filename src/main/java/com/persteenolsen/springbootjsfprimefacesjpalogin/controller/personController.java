@@ -6,7 +6,14 @@ import javax.enterprise.context.SessionScoped;
 //import javax.faces.flow.FlowScoped;
 //import javax.faces.view.ViewScoped;
 import java.io.Serializable;
+
+// Used for testing HttpSession information
+//import javax.servlet.http.HttpSession;
+//import java.util.Enumeration;
 import java.util.List;
+
+// Used for testing ServletRequest
+import javax.faces.context.*;
 
 import javax.inject.Inject;
 
@@ -17,7 +24,7 @@ import com.persteenolsen.springbootjsfprimefacesjpalogin.model.PersonEntity;
 import com.persteenolsen.springbootjsfprimefacesjpalogin.service.PersonService;
 
 //import javax.faces.application.FacesMessage;
-import javax.faces.context.FacesContext;
+//import javax.faces.context.FacesContext;
 
 @Named(value = "personController")
 @SessionScoped
@@ -51,26 +58,6 @@ public class personController implements Serializable {
     public personController() {
     }
 
-
-    // Get the memory info for the Java Virtuel Machine
-    public String getJVMHeap(){
-        
-        int mb = 1024*1024;
-        
-	    Runtime runtime = Runtime.getRuntime();
-	
-	    long usedmemory = (runtime.totalMemory() - runtime.freeMemory()) / mb;
-
-	    long freememory = runtime.freeMemory() / mb;
-
-	    long totalmemory = runtime.totalMemory() / mb;
-	
-	    long maxmemory = runtime.maxMemory() / mb;
-	
-	    String memoryheapS = "JVM Memory info in MB - Used: " + usedmemory + " Free: " + freememory + " Total: " + totalmemory + " Max: " + maxmemory;
-
-        return memoryheapS;
-    }
 
    // The method is used by updating a Person
     public PersonEntity getSelectedPerson() {

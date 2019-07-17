@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+	  xmlns:f="http://xmlns.jcp.org/jsf/core"
+	  xmlns:ui = "http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>Spring Boot JSF PrimeFaces JPA</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+	
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
+        <!--Not working eigther in the folder "recources" nor "webapp"-->
+	    <!--<h:outputStylesheet name="/css/style.css"  />-->
+	
+	</h:head>
+	
+    <h:body class="body">
+			
+        <div class="header">
+        <div class="menu-header">
+
+	       
+         <!--The menu with items is as a file -->			
+         <ui:include src="menuprotected.xhtml"/>
+     		  
+		
+      </div>
+     </div>
+
+     <div class="header-text">A Java Spring Boot Security JSF PrimeFaces JPA MySQL Web Application</div>
+        
+     <div class="jvminfo-text"> #{sessionController.getJVMHeap()} </div>
+	      
+     <div class="jvminfo-text">
+     <h:outputText value="#{sessionController.getSessionNamesHTML()}" escape="false" />
+    </div>
+
+    </h:body>
+</html>
+

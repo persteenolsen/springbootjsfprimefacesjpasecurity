@@ -44,7 +44,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             
             
             // The list of pages/views the users can request without being authenticated
-            .antMatchers("/", "/welcome.xhtml", "/listpersonspublic.xhtml", "/menu.xhtml", "/css/style.css" ).permitAll()
+            .antMatchers("/", "/welcome.xhtml", "/listpersonspublic.xhtml", "/menu.xhtml", "/css/style.css", "/getsessionnamespublic.xhtml" ).permitAll()
             
             // NOTE: This is needed for PrimeFaces Menu and DOM Elements to be displayed correct!!
             .antMatchers("/javax.faces.resource/**").permitAll()
