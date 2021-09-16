@@ -3,6 +3,7 @@ A Java Spring Boot JSF PrimeFaces JPA Web App using Spring Security
 
 This Java Spring Boot Security JSF PrimeFaces Web App was made by the following technology: 
 
+- Migration from Java 8 to Java 11
 - Visual Studio Code with the Microsoft Java Extension Pack
 - Microsoft Azure App Service with a Free App Service Plan for web hosting
 - JVM memory have been set to an alocation of 512 MB both initial and max because of the limited physial memory
